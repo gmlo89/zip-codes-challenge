@@ -6,9 +6,9 @@ This API provide information of mexican zip codes like: federal entity, settleme
 `GET /api/zip-codes/{zip-code}`
 
 ## Instalation
-1 - Clone this repository
-2 - Configure the .env file (You can copy and edit the .env.example file)
-3 - Run this commands:
+1. Clone this repository
+2. Configure the .env file (You can copy and edit the .env.example file)
+3. Run this commands:
 ```sh
 cd zipcodes
 composer install
