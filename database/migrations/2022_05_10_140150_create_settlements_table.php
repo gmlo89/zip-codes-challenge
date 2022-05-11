@@ -18,7 +18,7 @@ return new class extends Migration
             $table->unsignedSmallInteger('key')->index();
             $table->string('name');
             $table->string('zone_type');
-            $table->string('zip_code', 5);
+            $table->string('zip_code', 5)->index();
             $table->foreign('zip_code')->references('zip_code')->on('zip_codes');
             $table->foreignId('settlement_type_id')->constrained();
         });
