@@ -9,6 +9,7 @@ use App\Models\SettlementType;
 use App\Models\ZipCode;
 use Illuminate\Console\Command;
 use Illuminate\Support\LazyCollection;
+use Normalizer;
 
 class Start extends Command
 {
@@ -64,7 +65,9 @@ class Start extends Command
 
                 yield $data->mapWithKeys(function ($item, $key) use ($field_names) {
                     
-                    return [$field_names[$key] => utf8_encode( $item )];
+                    $item = utf8_encode($item);
+                    $item = preg_replace('/\p{M}/u', '', Normalizer::normalize($item, Normalizer::FORM_D));
+                    return [$field_names[$key] => $item];
                 });
             }
         })
