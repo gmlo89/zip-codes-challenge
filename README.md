@@ -5,12 +5,12 @@ This API provide information of mexican zip codes like: federal entity, settleme
 ## End Point
 `GET /api/zip-codes/{zip-code}`
 
-## Instalation
+## Installation
 1. Clone this repository
 2. Configure the .env file (You can copy and edit the .env.example file)
 3. Run this commands:
 ```sh
-cd zipcodes
+cd zip-codes-challenge
 composer install
 php artisan migrate
 php artisan zip-codes:start
