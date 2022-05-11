@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('settlements', function (Blueprint $table) {
             $table->id();
-            $table->unsignedSmallInteger('key');
+            $table->unsignedSmallInteger('key')->index();
             $table->string('name');
             $table->string('zone_type');
             $table->string('zip_code', 5);
