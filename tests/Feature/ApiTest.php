@@ -16,7 +16,7 @@ class ApiTest extends TestCase
      */
     public function test_apopulate_database()
     {
-        //$this->artisan('zip-codes:start')->assertSuccessful();
+        $this->artisan('zip-codes:start')->assertSuccessful();
     }
 
 
